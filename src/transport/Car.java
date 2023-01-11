@@ -72,12 +72,12 @@ public class Car extends Transport {
         } else {
             this.engineVolume = engineVolume;
         }
-        if (bodyType.isEmpty() || bodyType == null) {
+        if (bodyType == null ||bodyType.isEmpty() || bodyType.isBlank()) {
             this.bodyType = DEFAULT_VALUE;
         } else {
             this.bodyType = bodyType;
         }
-        if (registrationNumber.isEmpty() || registrationNumber == null) {
+        if (registrationNumber == null || registrationNumber.isEmpty() || registrationNumber.isBlank()) {
             this.registrationNumber = DEFAULT_VALUE;
         } else {
             this.registrationNumber = registrationNumber;
@@ -127,7 +127,7 @@ public class Car extends Transport {
     }
 
     public void setGearBox(String gearBox) {
-        if (gearBox.isEmpty() || gearBox == null) {
+        if (gearBox == null || gearBox.isEmpty() || gearBox.isBlank()) {
             this.gearBox = DEFAULT_COLOR;
         } else {
             this.gearBox = gearBox;
@@ -135,7 +135,7 @@ public class Car extends Transport {
     }
 
     public void setRegistrationNumber(String registrationNumber) {
-        if (registrationNumber.isEmpty() || registrationNumber == null) {
+        if (registrationNumber == null || registrationNumber.isEmpty() || registrationNumber.isBlank()) {
             this.registrationNumber = DEFAULT_COLOR;
         } else {
             this.registrationNumber = registrationNumber;

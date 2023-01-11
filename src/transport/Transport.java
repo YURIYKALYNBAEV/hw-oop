@@ -1,6 +1,6 @@
 package transport;
 
-public class Transport {
+public abstract class Transport {
     private final String brand;
     private final String model;
     private final int year;
@@ -19,12 +19,12 @@ public class Transport {
                      String country,
                      String color,
                      int maxSpeed) {
-        if (brand.isEmpty() || brand == null || brand.isBlank()) {
+        if (brand == null || brand.isEmpty() || brand.isBlank()) {
             this.brand = DEFAULT_VALUE;
         } else {
             this.brand = brand;
         }
-        if (model.isEmpty() || model == null || model.isBlank()) {
+        if (model == null || model.isEmpty() || model.isBlank()) {
             this.model = DEFAULT_VALUE;
         } else {
             this.model = model;
@@ -34,7 +34,7 @@ public class Transport {
         } else {
             this.year = year;
         }
-        if (country.isEmpty() || country == null || country.isBlank()) {
+        if (country == null || country.isEmpty() || country.isBlank()) {
             this.country = DEFAULT_VALUE;
         } else {
             this.country = country;
@@ -68,7 +68,7 @@ public class Transport {
     }
 
     public void setColor(String color) {
-        if (color.isEmpty() || color == null || color.isBlank()) {
+        if (color == null || color.isEmpty() || color.isBlank()) {
             this.color = DEFAULT_COLOR;
         } else {
             this.color = color;
